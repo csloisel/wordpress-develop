@@ -57,8 +57,22 @@ class Walker_Nav_Menu extends Walker {
 			$t = "\t";
 			$n = "\n";
 		}
-		$indent = str_repeat( $t, $depth );
-		$output .= "{$n}{$indent}<ul class=\"sub-menu\">{$n}";
+		$indent  = str_repeat( $t, $depth );
+		$classes = array( 'sub-menu' );
+
+		/**
+		 * Filters the CSS class(es) applied to a submenu container element.
+		 *
+		 * @since 4.8.0
+		 *
+		 * @param array    $classes The CSS classes that are applied to the submenu item's `<ul>` element.
+		 * @param stdClass $args    An object of wp_nav_menu() arguments.
+		 * @param int      $depth   Depth of menu item. Used for padding.
+		 */
+		$class_names = join( ' ', apply_filters( 'nav_menu_submenu_css_class', array_filter( $classes ), $args, $depth ) );
+		$class_names = $class_names ? ' class="' . esc_attr( $class_names ) . '"' : '';
+
+		$output .= "{$n}{$indent}<ul" . $class_names . ">{$n}";
 	}
 
 	/**
