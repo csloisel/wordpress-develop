@@ -63,7 +63,7 @@ class Walker_Nav_Menu extends Walker {
 		/**
 		 * Filters the CSS class(es) applied to a submenu container element.
 		 *
-		 * @since 4.7.4
+		 * @since 4.8.0
 		 *
 		 * @param array    $classes The CSS classes that are applied to the submenu item's `<ul>` element.
 		 * @param stdClass $args    An object of wp_nav_menu() arguments.
