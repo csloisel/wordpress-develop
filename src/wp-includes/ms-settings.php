@@ -20,7 +20,7 @@
  * @global object     $current_blog The current site.
  * @since 3.0.0
  */
-global $current_site, $current_blog;
+global $current_site, $current_blog, $domain, $path, $blog_id, $site_id, $public, $table_prefix;
 
 /** WP_Network class */
 require_once( ABSPATH . WPINC . '/class-wp-network.php' );
