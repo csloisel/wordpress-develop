@@ -18,9 +18,15 @@
  *
  * @global WP_Network $current_site The current network.
  * @global object     $current_blog The current site.
+ * @global string     $domain
+ * @global string     $path
+ * @global int        $blog_id
+ * @global int        $site_id
+ * @global bool       $public
+ * @global string     $table_prefix
  * @since 3.0.0
  */
-global $current_site, $current_blog;
+global $current_site, $current_blog, $domain, $path, $blog_id, $site_id, $public, $table_prefix;
 
 /** WP_Network class */
 require_once( ABSPATH . WPINC . '/class-wp-network.php' );
